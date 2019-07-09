@@ -1,7 +1,7 @@
 
 
 # Workbench for Openpilot
-Workbench is a desktop application to help you manage your Comma EON(s) as well as assisting with installing Openpilot.
+Workbench is a desktop application to help you manage openpilot driving agent running on a compatible Android device.
 It also has a goal of providing easier porting of new vehicles.
 
 <!-- ![](https://opc.ai/assets/workbench-readme-splash.png)
@@ -12,17 +12,11 @@ It also has a goal of providing easier porting of new vehicles.
 
 [![license](https://img.shields.io/github/license/openpilot-community/workbench.svg)](https://github.com/openpilot-community/workbench/blob/master/LICENSE)
 
-### Help fuel development!
-
-Think you can spare $1/month to support the open source efforts of Workbench and The Openpilot Community?<br />
-We receive **zero funding** from any commercial entity and all our code is MIT licensed so every little contribution helps...<br />
-Consider becoming a Patreon supporter and help us support you!
-
-<a href="https://www.patreon.com/bePatron?u=9861134" ><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" width="120" /></a>
+*For Support with Workbench, connect with me on the [Workbench Discord Channel](https://discord.gg/EvqPbw).*
 
 ## Getting Started
 
-### [Download Workbench](https://opc.ai/workbench)
+### [Download Workbench](https://github.com/jfrux/workbench/releases)
 
 > IMPORTANT: Workbench manages your EON over SSH.  You must enable SSH in your Settings on EON.
 
@@ -71,12 +65,14 @@ Consider becoming a Patreon supporter and help us support you!
 4. Install a version of nodejs with `nvm` or your node version manager.
    `nvm install 8.14.0` is the version I recommend.
    `nvm use 8.14.0`
-5. Move to the cloned directory and install the dependencies: 
+5. Install python 2.7.15 with `pyenv` or `asdf `.
+   `pyenv install 2.7.15` and set the current directory with `pyenv local 2.7.15`
+6. Move to the cloned directory and install the dependencies: 
   `npm run setup`
-6. Build the code and watch for changes:
+7. Build the code and watch for changes:
   `npm run dev`
-7. Checkout a new branch for your feature... something like `feature/what-is-it` or `bugfix/the-fix-for-something`
-8. Push your change up to your own GitHub fork and create a New Pull Request to request your new feature / bugfix branch  be upstreamed into the master for inclusion in the next release.
+8. Checkout a new branch for your feature... something like `feature/what-is-it` or `bugfix/the-fix-for-something`
+9. Push your change up to your own GitHub fork and create a New Pull Request to request your new feature / bugfix branch  be upstreamed into the master for inclusion in the next release.
 
 To make sure that your code works in the finished application, you can generate the binaries like this:
 
@@ -104,3 +100,11 @@ Feel free to create issues for feature requests and/or bugs.
 
 ## License
 MIT
+
+#### To run on Arch Linux
+
+1. Download latest appimage
+2. open terminal and cd /home/user/Downloads
+3. chmod +x Workbenchxxx.appimage
+4. ./Workbenchxxx
+5. It will ask if you want to integrate the appimage into system, select no
